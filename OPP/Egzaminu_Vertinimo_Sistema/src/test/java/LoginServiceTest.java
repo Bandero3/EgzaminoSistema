@@ -14,7 +14,8 @@ public class LoginServiceTest {
         String input = "password";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         Scanner scanner = new Scanner(System.in);
-        checker.isRepeatPasswordCorrect(scanner, "password");
+        boolean b = checker.isRepeatPasswordCorrect(scanner, "password");
+        assertTrue(b);
     }
 
     @Test
